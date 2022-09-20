@@ -20,4 +20,9 @@ public class SubmarineMove : MonoBehaviour
       moveVect *= speed * Time.deltaTime;
       transform.Translate(moveVect);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision){
+      if(collision.gameObject.tag == "Treasure")
+      speed *= 0.5f;
+    }
 }
