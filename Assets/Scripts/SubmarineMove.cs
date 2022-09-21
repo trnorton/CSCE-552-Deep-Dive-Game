@@ -24,8 +24,11 @@ public class SubmarineMove : MonoBehaviour
       transform.Translate(moveVect);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision){
-      if(collision.gameObject.tag == "Treasure")
-      speed *= 0.5f;
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Treasure")
+        {
+            speed *= 0.5f;
+        }
     }
 }
