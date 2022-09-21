@@ -623,7 +623,8 @@ MonoBehaviour:
   player: {fileID: 1839654906}
   spawnPoint: {fileID: 2032739914}
   speed: 2
-  distanceBetween: 7
+  distanceBetween: 5
+  idleEndPoint: -13
 --- !u!1 &955452518
 GameObject:
   m_ObjectHideFlags: 0
