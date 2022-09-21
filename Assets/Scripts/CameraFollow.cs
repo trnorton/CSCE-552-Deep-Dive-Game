@@ -9,15 +9,15 @@ public class CameraFollow : MonoBehaviour
     public GameObject sideLeft;
     public GameObject sideRight;
     private float bottomY;
-    private float sideXpositive;
-    private float sideXnegative;
+    private float leftX;
+    private float rightX;
 
     // Start is called before the first frame update
     void Start()
     {
       bottomY = bottom.transform.position.y+5;
-      sideXpositive = sideLeft.transform.position.x+9;
-      sideXnegative = sideRight.transform.position.x-9;
+      leftX = sideLeft.transform.position.x+12;
+      rightX = sideRight.transform.position.x-9.5f;
     }
 
     // Update is called once per frame
@@ -26,11 +26,7 @@ public class CameraFollow : MonoBehaviour
         if(player.transform.position.y > bottomY){
           transform.position = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
         }
-        if(player.transform.position.x > sideXpositive)
-        {
-            transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
-        }
-        if(player.transform.position.x < sideXnegative)
+        if(player.transform.position.x > leftX && player.transform.position.x < rightX)
         {
             transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
         }
