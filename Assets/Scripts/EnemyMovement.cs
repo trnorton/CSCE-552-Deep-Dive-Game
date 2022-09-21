@@ -24,13 +24,13 @@ public class EnemyMovement : MonoBehaviour
         target = transform.position;
         startX = transform.position.x;
         startY = transform.position.y;
+        Collider2D thisCollider = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         sprite.GetComponent<SpriteRenderer>().flipY = true;
-        Debug.Log(startY);
         //From shark to player
         distance = Vector2.Distance((transform.position), player.transform.position);
         Vector2 direction = (player.transform.position) - (this.transform.position);
@@ -87,6 +87,19 @@ public class EnemyMovement : MonoBehaviour
             if(directionIdle[0] < 0) sprite.GetComponent<SpriteRenderer>().flipY = false;
             if(directionIdle[0] > 0) sprite.GetComponent<SpriteRenderer>().flipX = false;
             if(directionIdle[0] > 0) sprite.GetComponent<SpriteRenderer>().flipY = true;
+        }
+    }
+
+    //Damage to player while they are colliding
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            var healthComponent = player.GetComponent<Health>();
+            if(healthComponent != null)
+            {
+                healthComponent.TakeDamage(1);
+            }
         }
     }
 

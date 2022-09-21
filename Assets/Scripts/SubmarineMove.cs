@@ -10,6 +10,7 @@ public class SubmarineMove : MonoBehaviour
     void Start()
     {
       sprite = this.transform.Find("submarineUPLOADABLE").gameObject;
+      Collider2D thisCollider = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
