@@ -201,7 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 466453493}
   - component: {fileID: 466453494}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightWall
   m_TagString: Border
   m_Icon: {fileID: 0}
@@ -406,9 +406,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 567054496}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bounds
-  m_TagString: Untagged
+  m_TagString: Border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -709,6 +709,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &651433380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 651433381}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &651433381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651433380}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.79, y: -0.371, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1839654910}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &791776944
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +806,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -805,8 +836,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1839654906}
   spawnPoint: {fileID: 2032739914}
+  SharkDestroyEffect: {fileID: 4585230097171529417, guid: 7190c4e7abbf23f47b5a82062856dadb, type: 3}
   speed: 2
-  distanceBetween: 5
+  distanceBetween: 8
   idleEndPoint: -13
 --- !u!1 &955452518
 GameObject:
@@ -1090,7 +1122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1179929476}
   - component: {fileID: 1179929477}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OceanSurface
   m_TagString: Border
   m_Icon: {fileID: 0}
@@ -1138,6 +1170,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1329941360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1329941361}
+  m_Layer: 0
+  m_Name: FirePointRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1329941361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329941360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.75, y: -0.371, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1839654910}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1372113207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,7 +1295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1389584797}
   - component: {fileID: 1389584798}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftWall
   m_TagString: Border
   m_Icon: {fileID: 0}
@@ -1430,6 +1493,7 @@ GameObject:
   - component: {fileID: 1839654908}
   - component: {fileID: 1839654907}
   - component: {fileID: 1839654911}
+  - component: {fileID: 1839654912}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1460,7 +1524,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.02315259, y: -0.26274526}
@@ -1510,6 +1574,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1372113208}
+  - {fileID: 651433381}
+  - {fileID: 1329941361}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1527,6 +1593,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+--- !u!114 &1839654912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839654906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e23995f05fd4a54fbf5e42bce206029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 651433381}
+  player: {fileID: 1839654906}
+  torpedoPrefab: {fileID: 3189039637965205954, guid: 03c3fe366a10cb64890c561e1775f667, type: 3}
+  fireSpeed: 900
+  fireTimer: 2
+  firePointRight: {fileID: 1329941361}
 --- !u!1 &2027841357
 GameObject:
   m_ObjectHideFlags: 0

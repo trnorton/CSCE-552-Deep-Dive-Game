@@ -6,6 +6,7 @@ public class EnemyMovement : MonoBehaviour
 {
     public GameObject player;
     public GameObject spawnPoint;
+    public GameObject SharkDestroyEffect;
     public float speed;
     private float distance;
     private GameObject sprite;
@@ -101,6 +102,23 @@ public class EnemyMovement : MonoBehaviour
                 healthComponent.TakeDamage(1);
             }
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameObject collisionGameObject = collision.gameObject;
+
+        if(collisionGameObject.tag == "Torpedo")
+        {
+            SharkDie();
+        }
+    }
+    void SharkDie()
+    {
+        if(SharkDestroyEffect != null)
+        {
+            Instantiate(SharkDestroyEffect, transform.position, Quaternion.identity);
+        }
+        Destroy(gameObject);
     }
 
 }
