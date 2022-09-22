@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CollectTreasure : MonoBehaviour
 {
+    public GameObject canvas;
+    public GameObject treasureIcon;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,8 @@ public class CollectTreasure : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Picked up treasure");
+            GameObject treasureIconImage = Instantiate(treasureIcon);
+            treasureIconImage.transform.SetParent(canvas.transform, false);
             Destroy(this.gameObject);
         }
 

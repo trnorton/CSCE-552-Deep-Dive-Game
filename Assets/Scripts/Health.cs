@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
 {
     public int maxHealth = 5;
     public int currentHealth;
+    public GameObject health;
     System.DateTime invincibleFrames = System.DateTime.Now;
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class Health : MonoBehaviour
     {
         if(invincibleFrames <= System.DateTime.Now)
         {
+            Destroy(health.transform.Find("Heart"+currentHealth.ToString()).gameObject);
             currentHealth -= amount;
             Debug.Log(currentHealth);
             Reset();
