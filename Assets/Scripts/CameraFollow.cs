@@ -17,7 +17,7 @@ public class CameraFollow : MonoBehaviour
     {
       bottomY = bottom.transform.position.y+5;
       leftX = sideLeft.transform.position.x+12;
-      rightX = sideRight.transform.position.x-9.5f;
+      rightX = sideRight.transform.position.x-12;
     }
 
     // Update is called once per frame
