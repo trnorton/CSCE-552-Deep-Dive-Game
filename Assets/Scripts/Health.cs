@@ -26,6 +26,9 @@ public class Health : MonoBehaviour
         else if(currentHealth <= 0)
         {
             //This is where the code would go for what happens when player loses
+
+            //I am just booting them to a "you lost menu" - Josh
+            SceneManager.LoadScene("LostTheGame");
         }
     }
     //2 seconds of invincibility
