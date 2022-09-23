@@ -5,6 +5,7 @@ using UnityEngine;
 public class SubmarineMove : MonoBehaviour
 {
     public float speed = 10.0f;
+    private bool hasTreasure = false;
     private GameObject sprite;
     // Start is called before the first frame update
     void Start()
@@ -23,13 +24,21 @@ public class SubmarineMove : MonoBehaviour
       if(inputX < 0) sprite.GetComponent<SpriteRenderer>().flipX = false;
       else if(inputX > 0) sprite.GetComponent<SpriteRenderer>().flipX = true;
       transform.Translate(moveVect);
+
+      //Debug.Log(sprite.transform.position.y > 35 && hasTreasure);
+      if (sprite.transform.position.y > 35 && hasTreasure)
+      {
+         //TODO win text displays
+      }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        AudioSource audio = gameObject.AddComponent<AudioSource>();
         if (collision.gameObject.tag == "Treasure")
         {
             speed *= 0.5f;
+            hasTreasure = true;
         }
     }
 }

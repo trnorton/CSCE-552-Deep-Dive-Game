@@ -17,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
     private float startY;
     public float idleEndPoint;
     private float distIdle;
+    public AudioSource sharkSound;
 
 
     void Start()
@@ -26,6 +27,7 @@ public class EnemyMovement : MonoBehaviour
         startX = transform.position.x;
         startY = transform.position.y;
         Collider2D thisCollider = GetComponent<Collider2D>();
+        sharkSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -94,8 +96,9 @@ public class EnemyMovement : MonoBehaviour
     //Damage to player while they are colliding
     void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
+            sharkSound.Play();
             var healthComponent = player.GetComponent<Health>();
             if(healthComponent != null)
             {
