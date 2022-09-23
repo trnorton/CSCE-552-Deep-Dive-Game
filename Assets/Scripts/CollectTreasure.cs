@@ -6,6 +6,7 @@ public class CollectTreasure : MonoBehaviour
 {
     public GameObject canvas;
     public GameObject treasureIcon;
+    public GameObject objectiveSecondHalf;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,8 @@ public class CollectTreasure : MonoBehaviour
             Debug.Log("Picked up treasure");
             GameObject treasureIconImage = Instantiate(treasureIcon);
             treasureIconImage.transform.SetParent(canvas.transform, false);
+            GameObject secondObjectiveText = Instantiate(objectiveSecondHalf);
+            secondObjectiveText.transform.SetParent(canvas.transform, false);
             Destroy(this.gameObject);
         }
 
