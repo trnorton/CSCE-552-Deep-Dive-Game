@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    public GameObject jellyfish;
     public GameObject player;
     public GameObject spawnPoint;
     public GameObject SharkDestroyEffect;
@@ -104,6 +105,10 @@ public class EnemyMovement : MonoBehaviour
             {
                 healthComponent.TakeDamage(1);
             }
+        }
+        if(collision.gameObject.CompareTag("Jellyfish"))
+        {
+            Physics.IgnoreCollision(jellyfish.GetComponent<Collider>(), GetComponent<Collider>());
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

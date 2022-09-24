@@ -1178,6 +1178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e077785d9b53c9a49a49b09ff513baf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jellyfish: {fileID: 1404396940}
   player: {fileID: 1839654906}
   spawnPoint: {fileID: 2032739914}
   SharkDestroyEffect: {fileID: 4585230097171529417, guid: 7190c4e7abbf23f47b5a82062856dadb, type: 3}
@@ -2120,7 +2121,7 @@ GameObject:
   - component: {fileID: 1404396941}
   m_Layer: 0
   m_Name: Jellyfish
-  m_TagString: Untagged
+  m_TagString: Jellyfish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
