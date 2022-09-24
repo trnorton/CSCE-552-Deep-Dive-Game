@@ -98,7 +98,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            sharkSound.Play();
+            //sharkSound.Play();
             var healthComponent = player.GetComponent<Health>();
             if(healthComponent != null)
             {
