@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public GameObject jellyfish;
+    private Vector3 startingPoint;
     public GameObject player;
-    public GameObject spawnPoint;
     public GameObject SharkDestroyEffect;
     public float speed;
     private float distance;
@@ -27,8 +27,11 @@ public class EnemyMovement : MonoBehaviour
         target = transform.position;
         startX = transform.position.x;
         startY = transform.position.y;
+        startingPoint = transform.position;
         Collider2D thisCollider = GetComponent<Collider2D>();
         sharkSound = GetComponent<AudioSource>();
+        Physics2D.IgnoreLayerCollision(8, 8);
+        Physics2D.IgnoreLayerCollision(8, 9);
     }
 
     // Update is called once per frame
@@ -42,8 +45,8 @@ public class EnemyMovement : MonoBehaviour
         float angle = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg) + 180;
 
         //From shark back to spawn
-        distFromSpawn = Vector2.Distance((transform.position), spawnPoint.transform.position);
-        Vector2 directionToSpawn = (spawnPoint.transform.position) - (this.transform.position);
+        distFromSpawn = Vector2.Distance((transform.position), startingPoint);
+        Vector2 directionToSpawn = (startingPoint) - (this.transform.position);
         directionToSpawn.Normalize();
         float angleToSpawn = (Mathf.Atan2(directionToSpawn.y, directionToSpawn.x) * Mathf.Rad2Deg) + 180;
 
@@ -66,7 +69,7 @@ public class EnemyMovement : MonoBehaviour
         else if (transform.position.y != startY)
         {
             target.x = startX;
-            transform.position = Vector2.MoveTowards(this.transform.position, (spawnPoint.transform.position), speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(this.transform.position, (startingPoint), speed * Time.deltaTime);
             transform.rotation = Quaternion.Euler(Vector3.forward * angleToSpawn);
             if(directionToSpawn[0] < 0) sprite.GetComponent<SpriteRenderer>().flipX = false;
             if(directionToSpawn[0] < 0) sprite.GetComponent<SpriteRenderer>().flipY = false;
