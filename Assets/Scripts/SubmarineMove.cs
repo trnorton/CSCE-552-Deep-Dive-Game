@@ -7,11 +7,14 @@ public class SubmarineMove : MonoBehaviour
     public float speed = 10.0f;
     private bool hasTreasure = false;
     private GameObject sprite;
+    public AudioClip pickupSound;
+    AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
       sprite = this.transform.Find("submarineUPLOADABLE").gameObject;
-      Collider2D thisCollider = GetComponent<Collider2D>();
+      Collider2D thisCollider = GetComponent<Collider2D>(); 
+      audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -39,6 +42,7 @@ public class SubmarineMove : MonoBehaviour
         {
             speed *= 0.5f;
             hasTreasure = true;
+            audioSource.PlayOneShot(pickupSound, 1.0f);
         }
     }
 }

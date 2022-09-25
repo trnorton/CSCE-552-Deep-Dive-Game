@@ -9,10 +9,13 @@ public class Health : MonoBehaviour
     public int currentHealth;
     public GameObject health;
     System.DateTime invincibleFrames = System.DateTime.Now;
+    public AudioSource damageSound;
+
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        damageSound = GetComponent<AudioSource>();
     }
     //Deals damage to current health
     public void TakeDamage(int amount)
@@ -22,6 +25,7 @@ public class Health : MonoBehaviour
             Destroy(health.transform.Find("Heart"+currentHealth.ToString()).gameObject);
             currentHealth -= amount;
             Debug.Log(currentHealth);
+            damageSound.Play();
             Reset();
         }
 

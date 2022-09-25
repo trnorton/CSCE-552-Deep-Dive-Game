@@ -11,12 +11,17 @@ public class CollectTreasure : MonoBehaviour
     public bool youWin;
     private bool treasureCollected;
     private float startLocation;
+    public AudioClip pickupSound;
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         youWin = false;
         treasureCollected = false;
         startLocation = this.transform.position.y;
+        audioSource = GetComponent<AudioSource>();
+        //pickupSound.Play();
     }
 
     // Update is called once per frame
@@ -39,6 +44,8 @@ public class CollectTreasure : MonoBehaviour
             secondObjectiveText.transform.SetParent(canvas.transform, false);
             Destroy(treasure);
             treasureCollected = true;
+            audioSource.PlayOneShot(pickupSound, 1.0f);
+            //pickupSound.Play();
         }
 
     }
