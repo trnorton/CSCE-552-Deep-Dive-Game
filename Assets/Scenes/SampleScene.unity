@@ -1074,7 +1074,6 @@ MonoBehaviour:
   treasureIcon: {fileID: 5301673480816834468, guid: 993b1a91468d1408697061c326aeb486, type: 3}
   objectiveSecondHalf: {fileID: 2905968483029949314, guid: 07b33e38451c446eb9176ee0e8e02b15, type: 3}
   youWin: 0
-  pickupSound: {fileID: 8300000, guid: 1427997bd1da73e419e4b4f4c8939bc1, type: 3}
 --- !u!82 &635147233
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3174,7 +3173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  pickupSound: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: 1427997bd1da73e419e4b4f4c8939bc1, type: 3}
 --- !u!61 &1839654908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3291,7 +3290,6 @@ MonoBehaviour:
   treasureIcon: {fileID: 5301673480816834468, guid: 993b1a91468d1408697061c326aeb486, type: 3}
   objectiveSecondHalf: {fileID: 2905968483029949314, guid: 07b33e38451c446eb9176ee0e8e02b15, type: 3}
   youWin: 0
-  pickupSound: {fileID: 8300000, guid: 1427997bd1da73e419e4b4f4c8939bc1, type: 3}
 --- !u!82 &1839654914
 AudioSource:
   m_ObjectHideFlags: 0
