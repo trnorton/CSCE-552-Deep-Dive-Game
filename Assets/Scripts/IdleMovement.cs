@@ -34,7 +34,7 @@ public class IdleMovement : MonoBehaviour
     }
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Shark"))
+        if (collision.gameObject.CompareTag("Shark") || collision.gameObject.CompareTag("Jellyfish"))
         {
              Physics.IgnoreCollision(shark.GetComponent<Collider>(), GetComponent<Collider>());
         }
