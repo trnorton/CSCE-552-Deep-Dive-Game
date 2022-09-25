@@ -8,6 +8,7 @@ TagManager:
   - Treasure
   - Torpedo
   - Jellyfish
+  - Shark
   layers:
   - Default
   - TransparentFX
