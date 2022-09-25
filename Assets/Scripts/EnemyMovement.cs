@@ -46,7 +46,7 @@ public class EnemyMovement : MonoBehaviour
         Vector2 directionToSpawn = (spawnPoint.transform.position) - (this.transform.position);
         directionToSpawn.Normalize();
         float angleToSpawn = (Mathf.Atan2(directionToSpawn.y, directionToSpawn.x) * Mathf.Rad2Deg) + 180;
-        
+
         //For Idle movement
         Vector2 directionIdle = target - this.transform.position;
         float angleToIdle = (Mathf.Atan2(directionIdle.y, directionIdle.x) * Mathf.Rad2Deg) + 180;
@@ -108,7 +108,7 @@ public class EnemyMovement : MonoBehaviour
         }
         if(collision.gameObject.CompareTag("Jellyfish"))
         {
-            Physics.IgnoreCollision(jellyfish.GetComponent<Collider>(), GetComponent<Collider>());
+            Physics2D.IgnoreCollision(jellyfish.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
