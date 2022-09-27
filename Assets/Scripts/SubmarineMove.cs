@@ -35,6 +35,11 @@ public class SubmarineMove : MonoBehaviour
       }
     }
 
+    public bool playerHasTreasure()
+    {
+        return hasTreasure;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         AudioSource audio = gameObject.AddComponent<AudioSource>();

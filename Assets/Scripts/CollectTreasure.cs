@@ -35,6 +35,7 @@ public class CollectTreasure : MonoBehaviour
         if (collision.gameObject.tag == "Treasure")
         {
             Debug.Log("Picked up treasure");
+            //speed up music
             GameObject treasureIconImage = Instantiate(treasureIcon);
             treasureIconImage.transform.SetParent(canvas.transform, false);
             GameObject secondObjectiveText = Instantiate(objectiveSecondHalf);
