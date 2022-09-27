@@ -400,6 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subMove: {fileID: 1839654907}
+  ColTres: {fileID: 635147232}
 --- !u!1001 &377815790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -755,6 +756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0040813a4a86deb45a68399204c0e9f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MC: {fileID: 352388240}
   PauseUI: {fileID: 0}
 --- !u!114 &519420035
 MonoBehaviour:

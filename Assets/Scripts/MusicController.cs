@@ -5,6 +5,7 @@ using UnityEngine;
 public class MusicController : MonoBehaviour
 {
     public SubmarineMove subMove;
+    public CollectTreasure ColTres;
     AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,20 @@ public class MusicController : MonoBehaviour
         {
             audioSource.pitch = 1.25f;
         }
+        if(subMove.playerHasWon())
+        {
+            audioSource.Pause();
+        }
         
+    }
+
+    public void playMusic()
+    {
+        audioSource.Play(1);
+    }
+
+    public void pauseMusic()
+    {
+        audioSource.Pause();
     }
 }

@@ -26,13 +26,16 @@ public class SubmarineMove : MonoBehaviour
       moveVect *= speed * Time.deltaTime;
       if(inputX < 0) sprite.GetComponent<SpriteRenderer>().flipX = false;
       else if(inputX > 0) sprite.GetComponent<SpriteRenderer>().flipX = true;
-      transform.Translate(moveVect);
+      transform.Translate(moveVect); 
+    }
 
-      //Debug.Log(sprite.transform.position.y > 35 && hasTreasure);
-      if (sprite.transform.position.y > 35 && hasTreasure)
-      {
-         //TODO win text displays
-      }
+    public bool playerHasWon()
+    {
+        if (sprite.transform.position.y > 36 && hasTreasure)
+        {
+            return true;
+        }
+        return false;
     }
 
     public bool playerHasTreasure()

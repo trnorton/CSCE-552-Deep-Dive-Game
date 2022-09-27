@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public MusicController MC;
     public GameObject PauseUI;
     private bool paused = false;
 
@@ -25,6 +26,7 @@ public class PauseMenu : MonoBehaviour
             PauseUI.SetActive(true);
             Debug.Log("Game Paused");
             paused = !paused;
+            MC.pauseMusic();
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && paused)
         {
@@ -32,6 +34,7 @@ public class PauseMenu : MonoBehaviour
             PauseUI.SetActive(false);
             Debug.Log("Game Resumed");
             paused = !paused;
+            MC.playMusic();
         }
 
     }
