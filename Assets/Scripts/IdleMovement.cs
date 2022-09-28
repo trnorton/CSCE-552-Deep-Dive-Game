@@ -9,6 +9,7 @@ public class IdleMovement : MonoBehaviour
     public GameObject player;
     public float speed;
     private bool moveRight;
+    public AudioSource damageSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class IdleMovement : MonoBehaviour
         spawn = transform.position;
         moveRight = true;
         speed = 5.0f;
+        damageSound = GetComponent<AudioSource>();
 
     }
 
@@ -43,6 +45,7 @@ public class IdleMovement : MonoBehaviour
              var healthComponent = player.GetComponent<Health>();
              if(healthComponent != null)
              {
+                damageSound.Play();
                 healthComponent.TakeDamage(1);
              }
         }

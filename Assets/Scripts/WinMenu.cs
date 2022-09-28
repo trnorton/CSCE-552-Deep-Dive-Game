@@ -22,7 +22,7 @@ public class WinMenu : MonoBehaviour
     void Update()
     {
         
-        Debug.Log(sub.GetComponent<CollectTreasure>().youWin);
+        //Debug.Log(sub.GetComponent<CollectTreasure>().youWin);
 
         if(sub.GetComponent<CollectTreasure>().youWin == true)
         {
