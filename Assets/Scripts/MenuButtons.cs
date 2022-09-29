@@ -22,7 +22,7 @@ public class MenuButtons : MonoBehaviour
     }
     public void OnClickQuit()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
-        Application.Quit();
+        //UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit(0);
     }
 }
