@@ -11,10 +11,12 @@ public class FireTorpedo : MonoBehaviour
     public float fireTimer;
     private bool isFiring;
     public Transform firePointRight;
+    public AudioSource audSour;
     // Start is called before the first frame update
     void Start()
     {
         isFiring = false;
+        audSour = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,6 +25,7 @@ public class FireTorpedo : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && !isFiring)
         {
             StartCoroutine(Fire());
+            audSour.Play();
             Physics2D.IgnoreLayerCollision(6, 7);
         }
     }

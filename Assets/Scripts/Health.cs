@@ -25,7 +25,7 @@ public class Health : MonoBehaviour
             Destroy(health.transform.Find("Heart"+currentHealth.ToString()).gameObject);
             currentHealth -= amount;
             Debug.Log(currentHealth);
-            damageSound.Play();
+            //damageSound.Play();
             Reset();
         }
 

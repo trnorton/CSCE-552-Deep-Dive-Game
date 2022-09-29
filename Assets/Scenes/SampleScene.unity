@@ -581,6 +581,14 @@ PrefabInstance:
       propertyPath: idleEndPoint
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 5895174428165477110, guid: 9bb8a193c6dd09e4786b13a941188a7c, type: 3}
+      propertyPath: m_Pitch
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5895174428165477110, guid: 9bb8a193c6dd09e4786b13a941188a7c, type: 3}
+      propertyPath: m_Volume
+      value: 0.745
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bb8a193c6dd09e4786b13a941188a7c, type: 3}
 --- !u!1 &465508880
@@ -3218,6 +3226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   pickupSound: {fileID: 8300000, guid: 1427997bd1da73e419e4b4f4c8939bc1, type: 3}
+  moveSound: {fileID: 8300000, guid: 188350744ce4a5e4e999b69adf5f1bcb, type: 3}
 --- !u!61 &1839654908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3317,6 +3326,7 @@ MonoBehaviour:
   fireSpeed: 900
   fireTimer: 2
   firePointRight: {fileID: 1329941361}
+  audSour: {fileID: 1839654914}
 --- !u!114 &1839654913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3344,10 +3354,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4e104e712e7c8c942947515ba3d67f18, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ebc8851751b0a9642b273aaf7a672fde, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.061
-  m_Pitch: 0.84
+  m_Pitch: 1.95
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -4328,6 +4338,10 @@ PrefabInstance:
       propertyPath: jellyfish
       value: 
       objectReference: {fileID: 1404396940}
+    - target: {fileID: 5895174428165477110, guid: 9bb8a193c6dd09e4786b13a941188a7c, type: 3}
+      propertyPath: m_Volume
+      value: 0.857
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bb8a193c6dd09e4786b13a941188a7c, type: 3}
 --- !u!1001 &6150539434144782641

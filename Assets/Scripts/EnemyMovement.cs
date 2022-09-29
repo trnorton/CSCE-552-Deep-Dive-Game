@@ -29,9 +29,14 @@ public class EnemyMovement : MonoBehaviour
         startY = transform.position.y;
         startingPoint = transform.position;
         Collider2D thisCollider = GetComponent<Collider2D>();
-        sharkSound = GetComponent<AudioSource>();
         Physics2D.IgnoreLayerCollision(8, 8);
         Physics2D.IgnoreLayerCollision(8, 9);
+
+        sharkSound = GetComponent<AudioSource>();
+        float pit = 0.7f;
+        float vol = 0.15f;
+        sharkSound.pitch = pit;
+        sharkSound.volume = vol;
     }
 
     // Update is called once per frame
@@ -106,6 +111,7 @@ public class EnemyMovement : MonoBehaviour
             if(healthComponent != null)
             {
                 healthComponent.TakeDamage(1);
+                sharkSound.Play();
             }
         }
         if(collision.gameObject.CompareTag("Jellyfish"))

@@ -3588,6 +3588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   pickupSound: {fileID: 8300000, guid: 1427997bd1da73e419e4b4f4c8939bc1, type: 3}
+  moveSound: {fileID: 0}
 --- !u!61 &1839654908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3687,6 +3688,7 @@ MonoBehaviour:
   fireSpeed: 900
   fireTimer: 2
   firePointRight: {fileID: 1329941361}
+  audSour: {fileID: 1839654914}
 --- !u!114 &1839654913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3714,7 +3716,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4e104e712e7c8c942947515ba3d67f18, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ebc8851751b0a9642b273aaf7a672fde, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.061
   m_Pitch: 0.84
