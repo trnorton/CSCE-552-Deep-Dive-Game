@@ -18,7 +18,7 @@ public class LoseScript : MonoBehaviour
     }
     public void OnClickPlayAgain()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level1");
     }
     public void onClickQuitToMain()
     {
