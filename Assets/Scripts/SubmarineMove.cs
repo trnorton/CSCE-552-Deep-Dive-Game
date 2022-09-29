@@ -9,7 +9,7 @@ public class SubmarineMove : MonoBehaviour
     private GameObject sprite;
     //private float vol = 0.0f;
     public AudioClip pickupSound;
-    public AudioClip moveSound;
+    //public AudioClip moveSound;
     AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
