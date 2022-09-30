@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4292499326002527830}
   - component: {fileID: 4292499326002527832}
   - component: {fileID: 4292499326002527831}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sharkUPLOADABLE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,9 +118,9 @@ GameObject:
   - component: {fileID: 4292499326151312645}
   - component: {fileID: 4292499326151312646}
   - component: {fileID: 5895174428165477110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shark
-  m_TagString: Untagged
+  m_TagString: Shark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,7 +200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e077785d9b53c9a49a49b09ff513baf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jellyfish: {fileID: 0}
   player: {fileID: 0}
   SharkDestroyEffect: {fileID: 4585230097171529417, guid: 7190c4e7abbf23f47b5a82062856dadb, type: 3}
   speed: 2

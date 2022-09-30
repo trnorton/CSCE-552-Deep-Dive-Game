@@ -9,6 +9,7 @@ TagManager:
   - Torpedo
   - Jellyfish
   - Shark
+  - Mine
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Bounds
   - Shark
   - Jellyfish
-  - 
+  - Mine
   - 
   - 
   - 
@@ -45,7 +46,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Canvas
-    uniqueID: 3760810507
     locked: 0

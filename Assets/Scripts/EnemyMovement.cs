@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public GameObject jellyfish;
     private Vector3 startingPoint;
     public GameObject player;
     public GameObject SharkDestroyEffect;
@@ -114,10 +113,7 @@ public class EnemyMovement : MonoBehaviour
                 sharkSound.Play();
             }
         }
-        if(collision.gameObject.CompareTag("Jellyfish"))
-        {
-            Physics2D.IgnoreCollision(jellyfish.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-        }
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
