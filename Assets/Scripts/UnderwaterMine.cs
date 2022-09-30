@@ -6,7 +6,7 @@ public class UnderwaterMine : MonoBehaviour
 {
     
     public GameObject player;
-    
+    public GameObject TorpedoDestroyEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +27,7 @@ public class UnderwaterMine : MonoBehaviour
              var healthComponent = player.GetComponent<Health>();
              if(healthComponent != null)
              {
-                
+                Instantiate(TorpedoDestroyEffect, transform.position, Quaternion.identity);
                 healthComponent.TakeDamage(1);
                 Destroy(this.gameObject);
              }
@@ -38,6 +38,7 @@ public class UnderwaterMine : MonoBehaviour
         GameObject collisionGameObject = collision.gameObject;
         if(collisionGameObject.tag == "Torpedo")
         {
+            Instantiate(TorpedoDestroyEffect, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }

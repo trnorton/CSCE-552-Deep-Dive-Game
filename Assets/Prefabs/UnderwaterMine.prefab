@@ -94,9 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c83cd98b43b124f93d12f8df785838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shark: {fileID: 4292499326151312640, guid: 9bb8a193c6dd09e4786b13a941188a7c, type: 3}
   player: {fileID: 0}
-  jellyfish: {fileID: 6150539433361685693, guid: d3159118469279f43ba2f1d4e6c164a3, type: 3}
+  TorpedoDestroyEffect: {fileID: 535568357166596571, guid: bc85b6858f1988147ac962ad1c5f10f1, type: 3}
 --- !u!1 &3899924639186697418
 GameObject:
   m_ObjectHideFlags: 0
