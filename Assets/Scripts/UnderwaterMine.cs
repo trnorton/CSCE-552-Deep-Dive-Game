@@ -30,6 +30,7 @@ public class UnderwaterMine : MonoBehaviour
                 Instantiate(TorpedoDestroyEffect, transform.position, Quaternion.identity);
                 healthComponent.TakeDamage(1);
                 Destroy(this.gameObject);
+                
              }
         }
     }
