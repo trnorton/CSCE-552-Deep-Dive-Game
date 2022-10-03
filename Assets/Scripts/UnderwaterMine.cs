@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UnderwaterMine : MonoBehaviour
 {
@@ -27,14 +28,14 @@ public class UnderwaterMine : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
              var healthComponent = player.GetComponent<Health>();
-             if(healthComponent != null)
+             if(healthComponent.currentHealth != 0)
              {
-                source.Play();
                 Instantiate(TorpedoDestroyEffect, transform.position, Quaternion.identity);
                 healthComponent.TakeDamage(1);
                 Destroy(this.gameObject);
-                
              }
+             if(healthComponent.currentHealth == 0)
+                SceneManager.LoadScene("LostTheGame");
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
